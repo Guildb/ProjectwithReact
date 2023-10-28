@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part A</title>
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css'/>
+    <script type='text/javascript' src='https://unpkg.com/leaflet@1.9.3/dist/leaflet.js'></script>
+    
+    <script type="module" src="test.js"></script>
+  </head>
+  <body>
+    <p id="usernamemsg" style="float: right; margin-top: 0px;"></p>
+    <h1>Please Select Wich option you want</h1>
+    <input type="button" id="loginDivBtn" value="Login" />
+    <input type="button" id="searchPoiBtn" value="Search Poi" />
+    <input type="button" id="recommendPoiBtn" value="Recommned Poi" />
+    <input type="button" id="addPoiBtn" value="Add Poi" />
+    <input type="button" id="reviewPoiBtn" value="Review"/>
+
+    <div style="margin-top: 10px; display: none;" id="loginUser">
+      <form>
+        <label for="searchValue">Please enter your details:</label>
+        <p><input type="text" id="username" /></p>
+        <p><input type="password" id="password" /></p>
+        <input type="button" id="loginBtn" value="Login" />
+      </form>
+    </div>
+    <div style="margin-top: 10px; display: none;" id="searchPoi">
+      <form>
+        <label for="searchValue">Please enter the POI region:</label>
+        <input type="text" id="searchValue" />
+        <input type="button" id="searchbtn" value="Search" />
+      </form>
+      <div id="map1" style="width: 50vw; height: 50vh; margin: 50px"></div>
+      <div id="resultdiv"></div>
+    </div>
+    <div style="margin-top: 10px; display: none;" id="recomendPoi">
+      <form>
+        <label for="idValue">Please enter the POI id:</label>
+        <input type="number" id="idValue" />
+        <input type="button" id="recommendBtn" value="Recommend" />
+      </form>
+    </div>
+    <div style="margin-top: 10px; display: none;" id="addPoi">
+      <p>Please enter the POI details bellow:</p>
+      <form>
+        <p>
+        <label for="name">Please enter the name:</label>
+        <input type="text" id="name" />
+          </p>
+          <p>
+        <label for="type">Please enter the type:</label>
+        <input type="text" id="type" />
+      </p>
+      <p>
+        <label for="country">Please enter the country:</label>
+        <input type="text" id="country" />
+</p>
+<p>
+        <label for="region">Please enter the region:</label>
+        <input type="text" id="region" />
+</p>
+<p>
+        <label for="lon">Please enter the long:</label>
+        <input type="number" id="lon" />
+</p>
+<p>
+        <label for="lat">Please enter the lat:</label>
+        <input type="number" id="lat" />
+</p>
+<p>
+        <label for="desc">Please enter a description:</label>
+        <input type="text" id="desc" />
+</p>
+        <input type="button" id="addBtn" value="Add" />
+      </form>
+    </div>
+
+    <form method='post' enctype='multipart/form-data'>
+      Select your file: <input type='file' id='userPhoto' />
+      <input type='button' id='uploadBtn' value='Upload!' />
+      </form>
+
+    <script type="text/javascript" src="map.js"></script>
+  </body>
+</html>
